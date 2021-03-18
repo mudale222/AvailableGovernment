@@ -22,27 +22,30 @@ const MeetingSearchBar = (props) => {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
-                    <form className="form-inline my-2 my-lg-0">
-                        <input type="submit" className="form-control mr-sm-2" type="search" placeholder="חפש" aria-label="Search" />
+                    <form className="form-inline my-2 my-lg-0 searchInputContainer">
+                        <input type="submit" className="form-control mr-sm-2 searchInput" type="search" placeholder="חפש" aria-label="Search" />
                     </form>
 
-                    <input type="text" name="datetimes" />
+                    <input className="datepicker" type="text" name="datetimes" />
 
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                בחר איזור
+                    <button className="form-control mr-sm-2 pickAreaButton" type="search" aria-label="Search">
+                        בחירת אזור
+                        <ul className="navbar-nav mr-auto pickAreaArrow">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                         </a>
-                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
-                                <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                    </ul>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a className="dropdown-item" href="#">Action</a>
+                                    <a className="dropdown-item" href="#">Another action</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </button>
 
-                    <input className="form-control mr-sm-2" type="search" placeholder="שם אירוע" aria-label="Search" />
+                    <input className="form-control mr-sm-2 eventInput" type="search" placeholder="שם אירוע" aria-label="Search" />
 
                 </div>
             </nav>
